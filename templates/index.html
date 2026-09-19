@@ -54,7 +54,11 @@
                 </div>
 
                 <div id="room-stt-wrapper">
-                    <label for="room-stt-mode">STT language</label>
+                    <div class="field-label-row">
+                        <label for="room-stt-mode">STT language</label>
+                        <button type="button" class="help-icon" aria-label="More info" aria-describedby="room-stt-help-text">i</button>
+                        <span id="room-stt-help-text" class="help-tooltip" role="tooltip">Controls this room's speech-recognition language. Global default inherits the server setting. In Primary + fallback, the fallback language is used only when detected with high confidence — otherwise the primary is used.</span>
+                    </div>
                     <select id="room-stt-mode" title="Override the global STT language policy for this room">
                         <option value="">Use global default</option>
                         <option value="auto">Auto-detect</option>
@@ -399,7 +403,11 @@
                                 <input id="sf-stt-timeout" type="number" min="5" max="300">
                             </div>
                             <div class="form-row">
-                                <label for="sf-stt-language-mode">Language mode</label>
+                                <div class="field-label-row">
+                                    <label for="sf-stt-language-mode">Language mode</label>
+                                    <button type="button" class="help-icon" aria-label="More info" aria-describedby="sf-stt-help-text">i</button>
+                                    <span id="sf-stt-help-text" class="help-tooltip" role="tooltip">Controls how speech recognition chooses a language. Auto lets the STT backend detect the language. Fixed always uses one language. Primary + fallback prefers the primary language unless the fallback language is detected with high confidence.</span>
+                                </div>
                                 <select id="sf-stt-language-mode">
                                     <option value="auto">Auto-detect</option>
                                     <option value="fixed">Fixed language</option>
