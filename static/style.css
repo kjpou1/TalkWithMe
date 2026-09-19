@@ -317,6 +317,48 @@ html, body {
     opacity: 0.5;
 }
 
+/* Per-room STT language override (mirrors #chat-room-selector's styling) */
+#room-stt-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 10px;
+}
+
+#room-stt-wrapper label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+#room-stt-wrapper select,
+#room-stt-wrapper input {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 0.85rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+#room-stt-wrapper select:disabled,
+#room-stt-wrapper input:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#room-stt-fallback-row {
+    display: flex;
+    gap: 6px;
+}
+
+#room-stt-fallback-row input {
+    width: auto;
+    flex: 1;
+}
+
 /* Persona list */
 #persona-list {
     display: flex;
